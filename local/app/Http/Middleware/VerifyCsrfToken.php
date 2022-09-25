@@ -1,0 +1,23 @@
+<?php
+
+namespace Responsive\Http\Middleware;
+
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
+
+class VerifyCsrfToken extends BaseVerifier
+{
+    /**
+     * The URIs that should be excluded from CSRF verification.
+     *
+     * @var array
+     */
+    protected $except = [
+       'pgResponse/*',
+	   'sampleResponse/*',
+	   'payu_failed/*',
+		'payu_success/*',
+		'cancel',
+		'perfectmoney_success',
+		'perfectmoney_status',
+    ];
+}
