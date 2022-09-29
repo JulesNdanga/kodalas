@@ -1,3 +1,10 @@
+-- --------------------------------------------------------
+-- Hôte:                         127.0.0.1
+-- Version du serveur:           5.7.33 - MySQL Community Server (GPL)
+-- SE du serveur:                Win64
+-- HeidiSQL Version:             11.2.0.6213
+-- --------------------------------------------------------
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
@@ -5,6 +12,12 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- Listage de la structure de la base pour pagrama1
+CREATE DATABASE IF NOT EXISTS `pagrama1` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `pagrama1`;
+
+-- Listage de la structure de la table pagrama1. avig_language
 CREATE TABLE IF NOT EXISTS `avig_language` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `lang_name` varchar(200) NOT NULL,
@@ -15,6 +28,7 @@ CREATE TABLE IF NOT EXISTS `avig_language` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.avig_language : ~1 rows (environ)
 DELETE FROM `avig_language`;
 /*!40000 ALTER TABLE `avig_language` DISABLE KEYS */;
 INSERT INTO `avig_language` (`id`, `lang_name`, `lang_code`, `lang_flag`, `lang_default`, `lang_status`) VALUES
@@ -22,6 +36,7 @@ INSERT INTO `avig_language` (`id`, `lang_name`, `lang_code`, `lang_flag`, `lang_
 	(10, 'Français', 'fr', '1662924252.jpg', 0, 1);
 /*!40000 ALTER TABLE `avig_language` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. avig_translate
 CREATE TABLE IF NOT EXISTS `avig_translate` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
@@ -31,6 +46,7 @@ CREATE TABLE IF NOT EXISTS `avig_translate` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1290 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.avig_translate : ~1 277 rows (environ)
 DELETE FROM `avig_translate`;
 /*!40000 ALTER TABLE `avig_translate` DISABLE KEYS */;
 INSERT INTO `avig_translate` (`id`, `name`, `token`, `lang_code`, `parent`) VALUES
@@ -730,7 +746,7 @@ INSERT INTO `avig_translate` (`id`, `name`, `token`, `lang_code`, `parent`) VALU
 	(694, 'Enter Paytm Number', '5c3755eecd1db', 'en', 0),
 	(695, 'أدخل رقم Paytm', '5c3755eecd1db', 'ar', 694),
 	(696, 'Ingrese el número de Paytm', '5c3755eecd1db', 'es', 694),
-	(697, 'Enter MTN MOBILE MONEY ID', '5c37560c90fc1', 'en', 0),
+	(697, 'Enter MTN MOBILE MONEY NUMBER', '5c37560c90fc1', 'en', 0),
 	(698, 'أدخل معرف باي بال', '5c37560c90fc1', 'ar', 697),
 	(699, 'Ingrese ID de Paypal', '5c37560c90fc1', 'es', 697),
 	(700, 'Enter Stripe Email ID', '5c37562af38dc', 'en', 0),
@@ -1325,6 +1341,7 @@ INSERT INTO `avig_translate` (`id`, `name`, `token`, `lang_code`, `parent`) VALU
 	(1289, '', '6330c78c9d3e9', 'fr', 697);
 /*!40000 ALTER TABLE `avig_translate` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. category
 CREATE TABLE IF NOT EXISTS `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cat_name` varchar(255) NOT NULL,
@@ -1340,6 +1357,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.category : ~51 rows (environ)
 DELETE FROM `category`;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
 INSERT INTO `category` (`id`, `cat_name`, `post_slug`, `image`, `cat_type`, `display_menu`, `delete_status`, `token`, `lang_code`, `parent`, `status`) VALUES
@@ -1396,6 +1414,7 @@ INSERT INTO `category` (`id`, `cat_name`, `post_slug`, `image`, `cat_type`, `dis
 	(83, '', 'laravel', '', 'framework', 1, '', '5c5adcaa25d8f', 'es', 41, 1);
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. contact_us
 CREATE TABLE IF NOT EXISTS `contact_us` (
   `cont_id` int(11) NOT NULL AUTO_INCREMENT,
   `cont_name` varchar(200) NOT NULL,
@@ -1406,6 +1425,7 @@ CREATE TABLE IF NOT EXISTS `contact_us` (
   PRIMARY KEY (`cont_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.contact_us : ~3 rows (environ)
 DELETE FROM `contact_us`;
 /*!40000 ALTER TABLE `contact_us` DISABLE KEYS */;
 INSERT INTO `contact_us` (`cont_id`, `cont_name`, `cont_email`, `cont_phone`, `cont_date`, `cont_message`) VALUES
@@ -1414,6 +1434,7 @@ INSERT INTO `contact_us` (`cont_id`, `cont_name`, `cont_email`, `cont_phone`, `c
 	(7, 'sssa', 'sds', 'fdsfda', '01-16-2019 08:40:04 am', 'fdsadfsa');
 /*!40000 ALTER TABLE `contact_us` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. country
 CREATE TABLE IF NOT EXISTS `country` (
   `country_id` int(11) NOT NULL AUTO_INCREMENT,
   `country_name` varchar(500) NOT NULL,
@@ -1421,6 +1442,7 @@ CREATE TABLE IF NOT EXISTS `country` (
   PRIMARY KEY (`country_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=204 DEFAULT CHARSET=latin1;
 
+-- Listage des données de la table pagrama1.country : ~197 rows (environ)
 DELETE FROM `country`;
 /*!40000 ALTER TABLE `country` DISABLE KEYS */;
 INSERT INTO `country` (`country_id`, `country_name`, `country_badges`) VALUES
@@ -1623,12 +1645,14 @@ INSERT INTO `country` (`country_id`, `country_name`, `country_badges`) VALUES
 	(203, 'Zimbabwe', '1549435943.png');
 /*!40000 ALTER TABLE `country` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. currency
 CREATE TABLE IF NOT EXISTS `currency` (
   `currency_id` int(11) NOT NULL AUTO_INCREMENT,
   `currency_code` varchar(50) NOT NULL,
   PRIMARY KEY (`currency_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.currency : ~33 rows (environ)
 DELETE FROM `currency`;
 /*!40000 ALTER TABLE `currency` DISABLE KEYS */;
 INSERT INTO `currency` (`currency_id`, `currency_code`) VALUES
@@ -1668,6 +1692,7 @@ INSERT INTO `currency` (`currency_id`, `currency_code`) VALUES
 	(41, 'XAF');
 /*!40000 ALTER TABLE `currency` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. migrations
 CREATE TABLE IF NOT EXISTS `migrations` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `migration` varchar(255) NOT NULL,
@@ -1675,6 +1700,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.migrations : ~2 rows (environ)
 DELETE FROM `migrations`;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -1682,6 +1708,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(2, '2014_10_12_100000_create_password_resets_table', 1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. newsletter
 CREATE TABLE IF NOT EXISTS `newsletter` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(200) NOT NULL,
@@ -1689,6 +1716,7 @@ CREATE TABLE IF NOT EXISTS `newsletter` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.newsletter : ~4 rows (environ)
 DELETE FROM `newsletter`;
 /*!40000 ALTER TABLE `newsletter` DISABLE KEYS */;
 INSERT INTO `newsletter` (`id`, `email`, `activated`) VALUES
@@ -1698,6 +1726,7 @@ INSERT INTO `newsletter` (`id`, `email`, `activated`) VALUES
 	(7, 'demo@gmail.com', 0);
 /*!40000 ALTER TABLE `newsletter` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. pages
 CREATE TABLE IF NOT EXISTS `pages` (
   `page_id` int(11) NOT NULL AUTO_INCREMENT,
   `page_title` varchar(255) NOT NULL,
@@ -1712,6 +1741,7 @@ CREATE TABLE IF NOT EXISTS `pages` (
   PRIMARY KEY (`page_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.pages : ~24 rows (environ)
 DELETE FROM `pages`;
 /*!40000 ALTER TABLE `pages` DISABLE KEYS */;
 INSERT INTO `pages` (`page_id`, `page_title`, `post_slug`, `page_desc`, `photo`, `menu_position`, `token`, `lang_code`, `parent`, `menu_order`) VALUES
@@ -1741,6 +1771,7 @@ INSERT INTO `pages` (`page_id`, `page_title`, `post_slug`, `page_desc`, `photo`,
 	(35, 'Política de privacidad', 'privacy-policy', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex laboris nisi ut aliquip', '', 'footer-menu', '5c3aceda14a3b', 'es', 12, 8);
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. post
 CREATE TABLE IF NOT EXISTS `post` (
   `post_id` int(11) NOT NULL AUTO_INCREMENT,
   `post_title` varchar(200) NOT NULL,
@@ -1773,8 +1804,9 @@ CREATE TABLE IF NOT EXISTS `post` (
   `parent` int(100) NOT NULL,
   `post_status` varchar(50) NOT NULL,
   PRIMARY KEY (`post_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.post : ~10 rows (environ)
 DELETE FROM `post`;
 /*!40000 ALTER TABLE `post` DISABLE KEYS */;
 INSERT INTO `post` (`post_id`, `post_title`, `post_slug`, `post_desc`, `post_tags`, `post_type`, `post_seat_space`, `post_parent`, `post_comment_type`, `post_media_type`, `post_image`, `post_start_date`, `post_end_date`, `post_location`, `post_phone`, `post_website`, `post_email`, `post_user_id`, `post_audio`, `post_video`, `post_date`, `post_staff_type`, `post_facebook`, `post_twitter`, `post_gplus`, `post_youtube`, `token`, `lang_code`, `parent`, `post_status`) VALUES
@@ -1789,6 +1821,7 @@ INSERT INTO `post` (`post_id`, `post_title`, `post_slug`, `post_desc`, `post_tag
 	(54, 'Hermosos botones css3 con efectos de desplazamiento.', 'beautiful-css-buttons-with-hover-effects', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'css3,hover effect,beautiful', 'blog', 0, 0, '', 'image', '1554285365.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '', '', '', 0, '1554285262.1539408495.SampleAudio_0.4mb.mp3', 'https://www.youtube.com/watch?v=2MpUj-Aua48', '2019-04-03 09:56:05', '', '', '', '', '', '5c3c3c4e7ad5f', 'es', 42, '1');
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. products
 CREATE TABLE IF NOT EXISTS `products` (
   `item_id` int(11) NOT NULL AUTO_INCREMENT,
   `item_token` varchar(1000) NOT NULL,
@@ -1842,6 +1875,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   PRIMARY KEY (`item_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=148 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.products : ~138 rows (environ)
 DELETE FROM `products`;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 INSERT INTO `products` (`item_id`, `item_token`, `user_id`, `item_title`, `item_slug`, `item_short_desc`, `item_desc`, `regular_price_six_month`, `regular_price_one_year`, `extended_price_six_month`, `extended_price_one_year`, `high_resolution`, `compatible_browser`, `file_included`, `demo_url`, `support_item`, `future_update`, `unlimited_download`, `category`, `framework_category`, `first_update`, `last_update`, `sales`, `item_thumbnail`, `preview_image`, `main_file`, `item_tags`, `item_featured`, `featured_startdate`, `featured_enddate`, `featured_days`, `featured_price`, `featured_payment_type`, `featured_payment_status`, `featured_payment_key`, `downloaded`, `item_type`, `item_script_type`, `item_layered`, `graphics_files`, `adobe_cs_version`, `pixel_dimensions`, `print_dimensions`, `liked`, `delete_status`, `token`, `lang_code`, `parent`, `item_status`) VALUES
@@ -1903,9 +1937,9 @@ INSERT INTO `products` (`item_id`, `item_token`, `user_id`, `item_title`, `item_
 	(63, '5b5fb4a04a25e', 1, 'Plugin de descarga digital Woocommerce', 'woocommerce-digital-download-plugin', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis n', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc', 20, 40, 60, 80, 'Yes', 'IE7,IE8,IE9,IE11,Firefox,Safari,Chrome', 'HTML,CSS,PSD', 'http://fluxkart.com', 'No', 'Yes', '20', '28_cat,30_cat,51_subcat', '', '0000-00-00', '2019-04-05', 0, '153649304778.jpg', '1532998913.jpg', '155436945012.ge.zip', 'css,html', 1, '2019-01-14', '2020-01-14', 365, 10, 'stripe', 'paid', 'tok_1DsUneA4i5sXvQrkcmiAku9L', 0, 'yes', 'code', '', '', '', '', '', 0, 'deleted', '5b5fb4a04a25e', 'es', 8, 1),
 	(64, '5b5fb2df121ea', 1, 'موضوع استجابة المتزلج', 'slider-responsive-theme', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis n', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc', 36, 45, 55, 80, 'Yes', 'IE7,IE8,IE9,Firefox,Safari,Opera,Chrome', 'HTML,CSS', 'http://fluxkart.com/fluxkart', 'Yes', 'Yes', '', '28_cat,44_subcat,51_subcat', '', '0000-00-00', '2019-04-05', 0, '153649326478.jpg', '1532998533.jpg', '155436949812.ge.zip', 'html,css,template', 1, '2022-09-25', '2023-09-25', 365, 1000, '', '', '', 1, 'no', 'code', '', '', '', '', '', 0, 'deleted', '5b5fb2df121ea', 'ar', 7, 1),
 	(65, '5b5fb2df121ea', 1, 'Tema de respuesta deslizante', 'slider-responsive-theme', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis n', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc', 36, 45, 55, 80, 'Yes', 'IE7,IE8,IE9,Firefox,Safari,Opera,Chrome', 'HTML,CSS', 'http://fluxkart.com/fluxkart', 'Yes', 'Yes', '', '28_cat,44_subcat,51_subcat', '', '0000-00-00', '2019-04-05', 0, '153649326478.jpg', '1532998533.jpg', '155436949812.ge.zip', 'html,css,template', 1, '2022-09-25', '2023-09-25', 365, 1000, '', '', '', 0, 'no', 'code', '', '', '', '', '', 0, 'deleted', '5b5fb2df121ea', 'es', 7, 1),
-	(66, '5c3ec0d051e73', 1, 'sample post', 'sample-post', 'sample post', 'sample post', 33, 34, 55, 56, 'No', 'Opera,Chrome,Edge', 'html', 'http://fluxkart.com', 'No', 'No', '', '45_subcat,46_subcat,30_cat', '', '2019-01-16', '2019-04-05', 0, '154761662578.jpeg', '154761662524.jpeg', '155437043712.ge.zip', 'tee', 1, '2019-01-16', '2020-01-16', 365, 10, 'paypal', 'paid', '74L20056YU0280943', 0, 'no', 'code', '', '', '', '', '', 0, '', '5c3ec0d051e73', 'en', 0, 1),
-	(67, '5c3ec0d051e73', 1, 'عينة عينة', 'sample-post', 'آخر عينة', 'عينة عينة', 33, 34, 55, 56, 'No', 'Opera,Chrome,Edge', 'html', 'http://fluxkart.com', 'No', 'No', '', '45_subcat,46_subcat,30_cat', '', '2019-01-16', '2019-04-05', 0, '154761662578.jpeg', '154761662524.jpeg', '155437043712.ge.zip', 'tee', 1, '2019-01-16', '2020-01-16', 365, 10, 'paypal', 'paid', '74L20056YU0280943', 0, 'no', 'code', '', '', '', '', '', 0, 'deleted', '5c3ec0d051e73', 'ar', 66, 1),
-	(68, '5c3ec0d051e73', 1, 'muestra de muestra', 'sample-post', 'muestra de muestra', 'muestra de muestra', 33, 34, 55, 56, 'No', 'Opera,Chrome,Edge', 'html', 'http://fluxkart.com', 'No', 'No', '', '45_subcat,46_subcat,30_cat', '', '2019-01-16', '2019-04-05', 0, '154761662578.jpeg', '154761662524.jpeg', '155437043712.ge.zip', 'tee', 1, '2019-01-16', '2020-01-16', 365, 10, 'paypal', 'paid', '74L20056YU0280943', 0, 'no', 'code', '', '', '', '', '', 0, 'deleted', '5c3ec0d051e73', 'es', 66, 1),
+	(66, '5c3ec0d051e73', 1, 'sample post', 'sample-post', 'sample post', 'sample post', 33, 34, 55, 56, 'No', 'Opera,Chrome,Edge', 'html', 'http://fluxkart.com', 'No', 'No', '', '45_subcat,46_subcat,30_cat', '', '2019-01-16', '2019-04-05', 0, '154761662578.jpeg', '154761662524.jpeg', '155437043712.ge.zip', 'tee', 1, '2019-01-16', '2020-01-16', 365, 10, 'paypal', 'paid', '74L20056YU0280943', 0, 'no', 'code', '', '', '', '', '', 0, '', '5c3ec0d051e73', 'en', 0, 0),
+	(67, '5c3ec0d051e73', 1, 'عينة عينة', 'sample-post', 'آخر عينة', 'عينة عينة', 33, 34, 55, 56, 'No', 'Opera,Chrome,Edge', 'html', 'http://fluxkart.com', 'No', 'No', '', '45_subcat,46_subcat,30_cat', '', '2019-01-16', '2019-04-05', 0, '154761662578.jpeg', '154761662524.jpeg', '155437043712.ge.zip', 'tee', 1, '2019-01-16', '2020-01-16', 365, 10, 'paypal', 'paid', '74L20056YU0280943', 0, 'no', 'code', '', '', '', '', '', 0, 'deleted', '5c3ec0d051e73', 'ar', 66, 0),
+	(68, '5c3ec0d051e73', 1, 'muestra de muestra', 'sample-post', 'muestra de muestra', 'muestra de muestra', 33, 34, 55, 56, 'No', 'Opera,Chrome,Edge', 'html', 'http://fluxkart.com', 'No', 'No', '', '45_subcat,46_subcat,30_cat', '', '2019-01-16', '2019-04-05', 0, '154761662578.jpeg', '154761662524.jpeg', '155437043712.ge.zip', 'tee', 1, '2019-01-16', '2020-01-16', 365, 10, 'paypal', 'paid', '74L20056YU0280943', 0, 'no', 'code', '', '', '', '', '', 0, 'deleted', '5c3ec0d051e73', 'es', 66, 0),
 	(69, '5c3f03e8a0232', 1, 'example post', 'example-post', '', 'example post&amp;nbsp;example post&amp;nbsp;example post&amp;nbsp;example post&amp;nbsp;example post&amp;nbsp;example post', 56, 78, 67, 99, 'No', 'IE9,IE10', 'html', '#', 'No', 'No', '', '47_subcat,50_subcat,30_cat', '', '2019-01-16', '2019-01-16', 0, '154763375778.jpg', '154763375724.jpg', '154763375712.Lighthouse.zip', 'html', 1, '2019-01-16', '2020-01-16', 365, 10, '', '', '', 0, '', '', '', '', '', '', '', 0, 'deleted', '5c3f03e8a0232', 'en', 0, 1),
 	(70, '5c3f03e8a0232', 1, 'مثال على ذلك', 'example-post', '', '', 56, 78, 67, 99, 'No', 'IE9,IE10', 'html', '#', 'No', 'No', '', '47_subcat,50_subcat,30_cat', '', '2019-01-16', '2019-01-16', 0, '154763375778.jpg', '154763375724.jpg', '154763375712.Lighthouse.zip', 'html', 1, '2019-01-16', '2020-01-16', 365, 10, '', '', '', 0, '', '', '', '', '', '', '', 0, 'deleted', '5c3f03e8a0232', 'ar', 69, 1),
 	(71, '5c3f03e8a0232', 1, 'post de ejemplo', 'example-post', '', '', 56, 78, 67, 99, 'No', 'IE9,IE10', 'html', '#', 'No', 'No', '', '47_subcat,50_subcat,30_cat', '', '2019-01-16', '2019-01-16', 0, '154763375778.jpg', '154763375724.jpg', '154763375712.Lighthouse.zip', 'html', 1, '2019-01-16', '2020-01-16', 365, 10, '', '', '', 0, '', '', '', '', '', '', '', 0, 'deleted', '5c3f03e8a0232', 'es', 69, 1),
@@ -1987,6 +2021,7 @@ INSERT INTO `products` (`item_id`, `item_token`, `user_id`, `item_title`, `item_
 	(147, '6330bb79ce95f', 1, '', 'charity', '', '', 12500, 19000, 1900, 4800, 'Yes', 'IE6,IE7,IE8,IE9,IE10,IE11,Firefox,Safari,Opera,Chrome,Edge', 'html,css,javascript', 'http://demo.htmlcodex.com/2553/free-nonprofit-website-template/', 'Yes', 'Yes', '', '30_cat', '', '2022-09-25', '2022-09-25', 0, '166413838978.Capture2.jpg', '166413838824.Capture2.jpg', '166413838812.chariteam.zip', 'charity,template', 1, '2022-09-25', '2023-09-25', 365, 1000, '', '', '', 6, 'yes', 'code', '', '', '', '', '', 0, '', '6330bb79ce95f', 'fr', 146, 1);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. products_meta
 CREATE TABLE IF NOT EXISTS `products_meta` (
   `item_meta_id` int(11) NOT NULL AUTO_INCREMENT,
   `item_token` varchar(200) NOT NULL,
@@ -1996,6 +2031,7 @@ CREATE TABLE IF NOT EXISTS `products_meta` (
   PRIMARY KEY (`item_meta_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.products_meta : ~28 rows (environ)
 DELETE FROM `products_meta`;
 /*!40000 ALTER TABLE `products_meta` DISABLE KEYS */;
 INSERT INTO `products_meta` (`item_meta_id`, `item_token`, `user_id`, `item_meta_key`, `item_meta_value`) VALUES
@@ -2029,6 +2065,7 @@ INSERT INTO `products_meta` (`item_meta_id`, `item_token`, `user_id`, `item_meta
 	(53, '5cb4892badcea', 1, 'item_video_preview', '1555335576172.sarav.mp4');
 /*!40000 ALTER TABLE `products_meta` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. product_checkout
 CREATE TABLE IF NOT EXISTS `product_checkout` (
   `cid` int(11) NOT NULL AUTO_INCREMENT,
   `purchase_token` varchar(500) NOT NULL,
@@ -2068,8 +2105,9 @@ CREATE TABLE IF NOT EXISTS `product_checkout` (
   `other_notes` mediumtext NOT NULL,
   `payment_status` varchar(100) NOT NULL,
   PRIMARY KEY (`cid`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.product_checkout : ~45 rows (environ)
 DELETE FROM `product_checkout`;
 /*!40000 ALTER TABLE `product_checkout` DISABLE KEYS */;
 INSERT INTO `product_checkout` (`cid`, `purchase_token`, `token`, `ord_id`, `item_prices`, `item_user_id`, `user_id`, `total`, `vendor_amount`, `admin_amount`, `payment_type`, `payment_token`, `payment_date`, `payment_approval`, `bill_firstname`, `bill_lastname`, `bill_companyname`, `bill_email`, `bill_phone`, `bill_country`, `bill_address`, `bill_city`, `bill_state`, `bill_postcode`, `enable_ship`, `ship_firstname`, `ship_lastname`, `ship_companyname`, `ship_email`, `ship_phone`, `ship_country`, `ship_address`, `ship_city`, `ship_state`, `ship_postcode`, `other_notes`, `payment_status`) VALUES
@@ -2119,9 +2157,13 @@ INSERT INTO `product_checkout` (`cid`, `purchase_token`, `token`, `ord_id`, `ite
 	(52, '4262871', 'a5ZOvQT92KBTe3VutXihFrb5q1BX5gWBOu6yPPGh', '76,77', '20,36', '7,7', 1, 56, 46, 10, 'wallet', '', '2022-09-25', 0, 'jules', 'ndanga', 'fnitgroup', 'julesndanga7@gmail.com', '+237 0659484590', 'Cameroon', 'douala logbessou', 'douala', 'Littorale', '4563', 0, '', '', '', '', '', '', '', '', '', '', '', 'completed'),
 	(53, '3747214', '9Tq8UXfJjMo2MB9spDcgO19aNI08TCDUHQEe2LDa', '78', '12500', '1', 27, 12500, 12490, 10, 'wallet', '', '2022-09-25', 0, 'jules', 'ndanga', 'fnitgroup', 'julesndanga7@gmail.com', '+237 0659484590', 'Cameroon', 'douala logbessou', 'douala', 'Littorale', '4563', 0, '', '', '', '', '', '', '', '', '', '', '', 'completed'),
 	(54, '6560212', 'RHxEWXnEMkx08zXa35nCKy3t9c06oPm7Z9S2OIFm', '79', '45', '1', 27, 45, 35, 10, 'wallet', '', '2022-09-25', 0, 'jules', 'ndanga', 'fnitgroup', 'julesndanga7@gmail.com', '+237 0659484590', 'Cameroon', 'douala logbessou', 'douala', 'Littorale', '4563', 0, '', '', '', '', '', '', '', '', '', '', '', 'completed'),
-	(55, '2253907', 'RHxEWXnEMkx08zXa35nCKy3t9c06oPm7Z9S2OIFm', '80', '36', '1', 27, 36, 26, 10, 'wallet', '', '2022-09-25', 0, 'jules', 'ndanga', 'fnitgroup', 'julesndanga7@gmail.com', '+237 0659484590', 'Cameroon', 'douala logbessou', 'douala', 'Littorale', '4563', 0, '', '', '', '', '', '', '', '', '', '', '', 'completed');
+	(55, '2253907', 'RHxEWXnEMkx08zXa35nCKy3t9c06oPm7Z9S2OIFm', '80', '36', '1', 27, 36, 26, 10, 'wallet', '', '2022-09-25', 0, 'jules', 'ndanga', 'fnitgroup', 'julesndanga7@gmail.com', '+237 0659484590', 'Cameroon', 'douala logbessou', 'douala', 'Littorale', '4563', 0, '', '', '', '', '', '', '', '', '', '', '', 'completed'),
+	(56, '4936561', 'iZbnfByc0OUEsdGTg9jXQY7ayrogmxAMX96Ak9YF', '81', '49', '1', 27, 49, 39, 10, 'wallet', '', '2022-09-28', 0, 'jules', 'ndanga', 'fnitgroup', 'julesndanga7@gmail.com', '+237 0659484590', 'Cameroon', 'douala logbessou', 'douala', 'Littorale', '4563', 0, '', '', '', '', '', '', '', '', '', '', '', 'completed'),
+	(57, '5467007', 'oeElSqfh9dATxl8hcMIEqAPHXCti9hF5xqehcqSG', '82,83', '150,25', '1,1', 27, 175, 165, 10, 'wallet', '', '2022-09-28', 0, 'jules', 'ndanga', 'fnitgroup', 'julesndanga7@gmail.com', '+237 0659484590', 'Cameroon', 'douala logbessou', 'douala', 'Littorale', '4563', 0, '', '', '', '', '', '', '', '', '', '', '', 'completed'),
+	(58, '2740932', 'll3zHmA9AW0Ntgw8nhGQKQVK1OmpC7kh8AwfvlFq', '84', '120', '1', 27, 120, 110, 10, 'wallet', '', '2022-09-28', 0, 'jules', 'ndanga', 'fnitgroup', 'julesndanga7@gmail.com', '+237 0659484590', 'Cameroon', 'douala logbessou', 'douala', 'Littorale', '4563', 0, '', '', '', '', '', '', '', '', '', '', '', 'completed');
 /*!40000 ALTER TABLE `product_checkout` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. product_comment
 CREATE TABLE IF NOT EXISTS `product_comment` (
   `comm_id` int(11) NOT NULL AUTO_INCREMENT,
   `item_id` int(200) NOT NULL,
@@ -2135,6 +2177,7 @@ CREATE TABLE IF NOT EXISTS `product_comment` (
   PRIMARY KEY (`comm_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.product_comment : ~24 rows (environ)
 DELETE FROM `product_comment`;
 /*!40000 ALTER TABLE `product_comment` DISABLE KEYS */;
 INSERT INTO `product_comment` (`comm_id`, `item_id`, `item_token`, `comm_user_id`, `item_user_id`, `comm_text`, `comm_date`, `comm_group_id`, `comm_parent`) VALUES
@@ -2164,6 +2207,7 @@ INSERT INTO `product_comment` (`comm_id`, `item_id`, `item_token`, `comm_user_id
 	(26, 80, '5c7f72445ca2d', 3, 3, 'thanks for your comments', '2019-04-01 07:18:54', '5ca1bb480f506', 24);
 /*!40000 ALTER TABLE `product_comment` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. product_images
 CREATE TABLE IF NOT EXISTS `product_images` (
   `item_img_id` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(200) NOT NULL,
@@ -2171,6 +2215,7 @@ CREATE TABLE IF NOT EXISTS `product_images` (
   PRIMARY KEY (`item_img_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.product_images : ~45 rows (environ)
 DELETE FROM `product_images`;
 /*!40000 ALTER TABLE `product_images` DISABLE KEYS */;
 INSERT INTO `product_images` (`item_img_id`, `image`, `item_token`) VALUES
@@ -2224,6 +2269,7 @@ INSERT INTO `product_images` (`item_img_id`, `image`, `item_token`) VALUES
 	(85, '1664138391_12Capture4.jpg', '6330bb79ce95f');
 /*!40000 ALTER TABLE `product_images` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. product_liked
 CREATE TABLE IF NOT EXISTS `product_liked` (
   `like_id` int(11) NOT NULL AUTO_INCREMENT,
   `item_id` int(200) NOT NULL,
@@ -2231,6 +2277,7 @@ CREATE TABLE IF NOT EXISTS `product_liked` (
   PRIMARY KEY (`like_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.product_liked : ~5 rows (environ)
 DELETE FROM `product_liked`;
 /*!40000 ALTER TABLE `product_liked` DISABLE KEYS */;
 INSERT INTO `product_liked` (`like_id`, `item_id`, `user_id`) VALUES
@@ -2241,6 +2288,7 @@ INSERT INTO `product_liked` (`like_id`, `item_id`, `user_id`) VALUES
 	(5, 42, 20);
 /*!40000 ALTER TABLE `product_liked` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. product_orders
 CREATE TABLE IF NOT EXISTS `product_orders` (
   `ord_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(200) NOT NULL,
@@ -2264,8 +2312,9 @@ CREATE TABLE IF NOT EXISTS `product_orders` (
   `delete_status` varchar(100) NOT NULL,
   `approval_status` varchar(500) NOT NULL,
   PRIMARY KEY (`ord_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.product_orders : ~48 rows (environ)
 DELETE FROM `product_orders`;
 /*!40000 ALTER TABLE `product_orders` DISABLE KEYS */;
 INSERT INTO `product_orders` (`ord_id`, `user_id`, `item_id`, `item_name`, `item_user_id`, `item_token`, `purchase_token`, `purchase_code`, `payment_token`, `payment_type`, `licence_type`, `license_start_date`, `license_end_date`, `downloaded_count`, `price`, `vendor_amount`, `admin_amount`, `total`, `status`, `delete_status`, `approval_status`) VALUES
@@ -2318,9 +2367,14 @@ INSERT INTO `product_orders` (`ord_id`, `user_id`, `item_id`, `item_name`, `item
 	(77, 1, 7, 'Slider responsive theme', 7, '5b5fb2df121ea', '4262871', 'GcaSgWtAdQhu2cIiYIWBdUGVWPQgpZvzkNK', '', '', 'regular_price_six_month', '0000-00-00', '0000-00-00', 0, 36, 26, 10, 36, 'completed', '', ''),
 	(78, 27, 146, 'Template website charity', 1, '6330bb79ce95f', '3747214', 'mbpoebJqNoGbQhVN5Yo2gLNTNS1i7zJS3tU', '', 'wallet', 'regular_price_six_month', '2022-09-25', '2023-03-25', 0, 12500, 12490, 10, 12500, 'completed', '', 'payment released to vendor'),
 	(79, 27, 74, 'example product', 1, '5c46fba36e690', '6560212', 'yfgNEtft3YmucaKijJqikjad8K60TIiJWd3', '', 'wallet', 'regular_price_six_month', '2022-09-25', '2023-03-25', 0, 45, 35, 10, 45, 'completed', '', 'payment released to vendor'),
-	(80, 27, 7, 'Slider responsive theme', 1, '5b5fb2df121ea', '2253907', 'wV2A4AgbnLWTijJj2epMYI4HOAIEch0wbpA', '', 'wallet', 'regular_price_six_month', '2022-09-25', '2023-03-25', 0, 36, 26, 10, 36, 'completed', '', 'payment released to vendor');
+	(80, 27, 7, 'Slider responsive theme', 1, '5b5fb2df121ea', '2253907', 'wV2A4AgbnLWTijJj2epMYI4HOAIEch0wbpA', '', 'wallet', 'regular_price_six_month', '2022-09-25', '2023-03-25', 0, 36, 26, 10, 36, 'completed', '', 'payment released to vendor'),
+	(81, 27, 89, 'PayuKart Multivendor Products Marketplace', 1, '5c839c48ec8bc', '4936561', 'gqS3yCp2U6XU1P1en3By3thNN2H9QVrc510', '', 'wallet', 'regular_price_six_month', '2022-09-28', '2023-03-28', 0, 49, 39, 10, 49, 'completed', '', 'payment released to vendor'),
+	(82, 27, 101, 'WooCommerce Checkout For Digital Goods', 1, '5ca4a1833436b', '5467007', '5hf9QD2zAPypITykXCmH7rp9fxQ2VgNFeKm', '', 'wallet', 'extended_price_one_year', '2022-09-28', '2023-09-28', 0, 150, 140, 10, 150, 'completed', '', 'payment released to vendor'),
+	(83, 27, 10, 'Fitness html5 template', 1, '5b5fc0b88007e', '5467007', '7mXGMISinaspfpAUTVQpHU531SuWDx5fBQB', '', '', 'regular_price_six_month', '0000-00-00', '0000-00-00', 0, 25, 15, 10, 25, 'completed', '', ''),
+	(84, 27, 3, 'Subscription script', 1, '5b5d2b5a07c0d', '2740932', 'WRfvs2jUiyY8GcIM3ayWhaMB2OtBMcadqy2', '', 'wallet', 'extended_price_one_year', '2022-09-28', '2023-09-28', 0, 120, 110, 10, 120, 'completed', '', 'payment released to vendor');
 /*!40000 ALTER TABLE `product_orders` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. product_rating
 CREATE TABLE IF NOT EXISTS `product_rating` (
   `rate_id` int(11) NOT NULL AUTO_INCREMENT,
   `item_id` int(200) NOT NULL,
@@ -2331,6 +2385,7 @@ CREATE TABLE IF NOT EXISTS `product_rating` (
   PRIMARY KEY (`rate_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.product_rating : ~11 rows (environ)
 DELETE FROM `product_rating`;
 /*!40000 ALTER TABLE `product_rating` DISABLE KEYS */;
 INSERT INTO `product_rating` (`rate_id`, `item_id`, `user_id`, `rating`, `review`, `review_date`) VALUES
@@ -2347,6 +2402,7 @@ INSERT INTO `product_rating` (`rate_id`, `item_id`, `user_id`, `rating`, `review
 	(15, 9, 8, 5, 'good', '2019-01-22 12:19:50');
 /*!40000 ALTER TABLE `product_rating` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. product_refund
 CREATE TABLE IF NOT EXISTS `product_refund` (
   `dispute_id` int(11) NOT NULL AUTO_INCREMENT,
   `purchase_token` int(200) NOT NULL,
@@ -2365,6 +2421,7 @@ CREATE TABLE IF NOT EXISTS `product_refund` (
   PRIMARY KEY (`dispute_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.product_refund : ~13 rows (environ)
 DELETE FROM `product_refund`;
 /*!40000 ALTER TABLE `product_refund` DISABLE KEYS */;
 INSERT INTO `product_refund` (`dispute_id`, `purchase_token`, `request_date`, `order_id`, `item_id`, `payment_date`, `buyer_id`, `vendor_id`, `payment`, `payment_type`, `subject`, `message`, `delete_status`, `dispute_status`) VALUES
@@ -2383,6 +2440,7 @@ INSERT INTO `product_refund` (`dispute_id`, `purchase_token`, `request_date`, `o
 	(27, 2858375, '2019-04-16', 71, 89, '2019-04-16', 3, 7, 49, 'localbank', 'i need refund money', 'i need refund money', '', 'payment refunded to buyer');
 /*!40000 ALTER TABLE `product_refund` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. product_report
 CREATE TABLE IF NOT EXISTS `product_report` (
   `rid` int(11) NOT NULL AUTO_INCREMENT,
   `item_id` int(100) NOT NULL,
@@ -2393,10 +2451,12 @@ CREATE TABLE IF NOT EXISTS `product_report` (
   PRIMARY KEY (`rid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- Listage des données de la table pagrama1.product_report : ~0 rows (environ)
 DELETE FROM `product_report`;
 /*!40000 ALTER TABLE `product_report` DISABLE KEYS */;
 /*!40000 ALTER TABLE `product_report` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. product_withdraw
 CREATE TABLE IF NOT EXISTS `product_withdraw` (
   `wid` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(100) NOT NULL,
@@ -2411,8 +2471,9 @@ CREATE TABLE IF NOT EXISTS `product_withdraw` (
   `perfectmoney_id` varchar(150) NOT NULL,
   `withdraw_status` varchar(100) NOT NULL,
   PRIMARY KEY (`wid`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.product_withdraw : ~9 rows (environ)
 DELETE FROM `product_withdraw`;
 /*!40000 ALTER TABLE `product_withdraw` DISABLE KEYS */;
 INSERT INTO `product_withdraw` (`wid`, `user_id`, `withdraw_amount`, `withdraw_payment_type`, `paypal_id`, `stripe_id`, `bank_account_no`, `bank_info`, `bank_ifsc`, `paytm_no`, `perfectmoney_id`, `withdraw_status`) VALUES
@@ -2421,9 +2482,13 @@ INSERT INTO `product_withdraw` (`wid`, `user_id`, `withdraw_amount`, `withdraw_p
 	(5, 8, '35', 'localbank', '', '', '8732823', 'test bank and new street', '32432', '', '', 'completed'),
 	(6, 20, '5', 'paytm', '', '', '', '', '', '9876543210', '', 'pending'),
 	(7, 23, '50', 'stripe', '', 'new@gmail.com', '', '', '', '', '', 'pending'),
-	(8, 7, '16', 'perfectmoney', '', '', '', '', '', '', 'U324343', 'completed');
+	(8, 7, '16', 'perfectmoney', '', '', '', '', '', '', 'U324343', 'completed'),
+	(9, 27, '2566', 'paypal', '135151515', '', '', '', '', '', '', 'pending'),
+	(10, 27, '2566', 'paypal', '680364380', '', '', '', '', '', '', 'pending'),
+	(11, 27, '2566', 'paypal', '680364380', '', '', '', '', '', '', 'pending');
 /*!40000 ALTER TABLE `product_withdraw` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. settings
 CREATE TABLE IF NOT EXISTS `settings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `site_name` varchar(255) NOT NULL,
@@ -2500,12 +2565,14 @@ CREATE TABLE IF NOT EXISTS `settings` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.settings : ~0 rows (environ)
 DELETE FROM `settings`;
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
 INSERT INTO `settings` (`id`, `site_name`, `site_desc`, `site_keyword`, `site_address`, `site_phone`, `site_email`, `site_layout`, `site_facebook`, `site_twitter`, `site_gplus`, `site_pinterest`, `site_instagram`, `site_currency`, `site_logo`, `site_favicon`, `site_banner`, `site_banner_heading`, `site_banner_subheading`, `header_type`, `site_copyright`, `site_post_per`, `site_comment_per`, `site_latest_item`, `site_latest_item_count`, `paypal_id`, `paypal_url`, `site_map_api`, `site_url`, `image_size`, `video_size`, `image_type`, `mp3_size`, `zip_size`, `site_loading`, `site_loading_url`, `site_primary_color`, `site_secondary_color`, `site_button_color`, `site_link_color`, `with_submit_product`, `payment_option`, `withdraw_option`, `stripe_mode`, `test_publish_key`, `test_secret_key`, `live_publish_key`, `live_secret_key`, `commission_mode`, `commission_amt`, `withdraw_amt`, `processing_fee`, `featured_price`, `featured_days`, `min_price_range`, `max_price_range`, `promo_icon_1`, `promo_title_1`, `promo_desc_1`, `promo_icon_2`, `promo_title_2`, `promo_desc_2`, `promo_icon_3`, `promo_title_3`, `promo_desc_3`, `promo_icon_4`, `promo_title_4`, `promo_desc_4`, `site_footer_newsletter`, `site_blog_visible`, `site_blog_per`, `refund_time_limit`) VALUES
 	(1, 'KODALAS', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat', 'lorem,ipsum,lorem,ipsum', 'Douala, Cameroon', '(+237) 659-484-590', 'test@test.com', '4', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.google.com', 'http://www.pinterest.com', 'http://www.instagram.com', 'XAF', '1664134613555.png', '166413461390.png', '1554278724.jpg', 'BETTER ITEMS FOR SALE', 'Best Premium PSD, HTML, Wordpress Themes, PHP Scripts & Others Graphics', 'static', '© 2022. All Rights Reserved. Designed by Jules NDANGA', 20, 3, 7, 18, 'demochecks@gmail.com', 'https://www.sandbox.paypal.com/cgi-bin/webscr', 'AIzaSyDDsvwtCM8LTvi1Zm-XydV-iutWZzAJVDI', 'http://localhost/laraportfolio', 18288, 1024, 'jpg,jpeg,png,gif', 18288, 18288, 1, '1554278724.gif', '#051F39', '#0E2A47', '#21C063', '#0E2A47', 0, 'wallet', 'paypal,localbank', 'test', 'pk_test_bWx1fEQgVZozaQyPZpAjwDMQ', 'sk_test_JKf2bTvOtK7fPFrHoMphlvAV', 'dfsaaaaaaaaaa', 'fdssssssssssssssssssss', 'fixed', 10, 1000, 0, 1000, 365, 100, 300, 'fa-desktop', 'High Quality Items', 'Item made by professionals with 15 years of work experience.', 'fa-clock-o', '24/7 Customer Services', 'Our Customer Services Managers will always help you.', 'fa-thumbs-o-up', '100% Satisfaction', 'In case you are not satisfied with the purchased item, we will change it.', 'fa-money', 'Money Back guarantee', 'In case you change your mind you will get a refund in 30 days.', 'Want more script,themes & templates? Subscribe to our mailing list to receive an update when new items arrive!', 'yes', 2, 15);
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. settings_meta
 CREATE TABLE IF NOT EXISTS `settings_meta` (
   `sett_meta_id` int(11) NOT NULL AUTO_INCREMENT,
   `sett_meta_key` varchar(200) NOT NULL,
@@ -2513,6 +2580,7 @@ CREATE TABLE IF NOT EXISTS `settings_meta` (
   PRIMARY KEY (`sett_meta_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.settings_meta : ~56 rows (environ)
 DELETE FROM `settings_meta`;
 /*!40000 ALTER TABLE `settings_meta` DISABLE KEYS */;
 INSERT INTO `settings_meta` (`sett_meta_id`, `sett_meta_key`, `sett_meta_value`) VALUES
@@ -2531,7 +2599,7 @@ INSERT INTO `settings_meta` (`sett_meta_id`, `sett_meta_key`, `sett_meta_value`)
 	(20, 'payment_approval', 'no'),
 	(21, 'site_seo_slug', 'yes'),
 	(22, 'sender_name', 'KODALAS'),
-	(23, 'sender_email', 'test@test.com'),
+	(23, 'sender_email', 'kodalas@dikaloo.com'),
 	(30, 'two_checkout_mode', 'true'),
 	(31, 'two_checkout_account', '901401777'),
 	(32, 'two_checkout_publishable', '11C26691-0E20-4743-A6FE-514D66BCE377'),
@@ -2574,6 +2642,7 @@ INSERT INTO `settings_meta` (`sett_meta_id`, `sett_meta_key`, `sett_meta_value`)
 	(100, 'site_verify_purchase', 'off');
 /*!40000 ALTER TABLE `settings_meta` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. subcategory
 CREATE TABLE IF NOT EXISTS `subcategory` (
   `subid` int(11) NOT NULL AUTO_INCREMENT,
   `subcat_name` varchar(255) NOT NULL,
@@ -2589,6 +2658,7 @@ CREATE TABLE IF NOT EXISTS `subcategory` (
   PRIMARY KEY (`subid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=163 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.subcategory : ~111 rows (environ)
 DELETE FROM `subcategory`;
 /*!40000 ALTER TABLE `subcategory` DISABLE KEYS */;
 INSERT INTO `subcategory` (`subid`, `subcat_name`, `post_slug`, `cat_id`, `subimage`, `subcat_type`, `delete_status`, `token`, `lang_code`, `parent`, `status`) VALUES
@@ -2705,6 +2775,7 @@ INSERT INTO `subcategory` (`subid`, `subcat_name`, `post_slug`, `cat_id`, `subim
 	(162, '', 'version', '41', '', 'framework', '', '5c5adcd51887f', 'es', 86, 1);
 /*!40000 ALTER TABLE `subcategory` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(191) NOT NULL,
@@ -2733,12 +2804,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   `show_menu` varchar(200) NOT NULL,
   `status` int(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.users : ~11 rows (environ)
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `name`, `user_slug`, `email`, `password`, `provider`, `provider_id`, `gender`, `country`, `address`, `phone`, `photo`, `profile_banner`, `about`, `wallet`, `confirmation`, `confirm_key`, `admin`, `referred_by`, `referral_amount`, `remember_token`, `delete_status`, `created_at`, `updated_at`, `show_menu`, `status`) VALUES
-	(1, 'admin', 'admin', 'admin@admin.com', '$2y$10$N0gRNGGDLxwqUJqZLhYpiO70S5i1xKbmDhTE4LnhgjJb/DOrStSU6', '', '', 'male', 'United States', '2, sample', '9876543210', '', '', 'hello', 13262.6, 1, '', 1, '', '', '0DEUVTDaBnsYIOjBRWU3ks6dfEt00y6gzBqyPXZdqOv7xDE8PgnVw3HmbyNV', '', '2017-05-25 02:30:45', '2017-05-25 02:30:45', '1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20', 0),
+	(1, 'admin', 'admin', 'kodalas@dikaloo.com', '$2y$10$N0gRNGGDLxwqUJqZLhYpiO70S5i1xKbmDhTE4LnhgjJb/DOrStSU6', '', '', 'male', 'United States', '2, sample', '659484590', '', '', 'hello', 13581.6, 1, '', 1, '', '', 'aCRUIu7QwSyTHcEHPGfgO27puqB3fpOcmEeslCgOIoDqYZ2bBjlNrlpsKe72', '', '2017-05-25 02:30:45', '2017-05-25 02:30:45', '1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18', 0),
 	(3, 'sample', 'sample', 'sample@sample.com', '$2y$10$n8Ck0Gj37F0QpiZx5tDzSuAgfXVsQpQHcZImqFA4lBuYp4soFFFWC', '', '', 'male', '19', '2, wel', '1235645555', '1513790163.jpg', '155410128665.jpg', 'test', 200.4, 1, '', 0, '', '', '5whoXmMaQc02OI8KrhDZv8EAXG1DZkxGgTHnL17DjurXw7xk3Y5YUCT369vi', 'deleted', NULL, NULL, '', 0),
 	(7, 'demo', 'demo', 'demo@gmail.com', '$2y$10$pT4ZxL0sNarhoX/0yjsMV.3cRB7x3XeQaSSWZUf6dpv.A9GFKgTdC', '', '', 'male', '73', 'test address', '6464655', '', '', 'Hello', 317, 1, '', 0, '', '15', '2AWE4Pw82Q1eUsJfJiF6CvadzPOUkXv9lDUjIRPitswwkgiwFsawVxv6nSac', '', '2013-01-02 09:31:34', NULL, '', 0),
 	(8, 'example', 'example', 'example@sample.com', '$2y$10$4bvRYCgzIlTUvGB.cIjVgORtkAhje646lQU.CgK0Vz9I2sckSVBQe', '', '', 'male', '193', '45,weldone street', '3242432', '1554443491210.jpg', '155444349265.jpg', 'lorem ipsum lorem ipsum', 978, 1, '', 0, '', '', 'k3CggmMe5ubB5E7vpqGoPdF8SBXZX29ojbX8NBOqMqTJs37XgHqgkHY5RwWL', 'deleted', '2015-01-02 09:31:34', NULL, '', 0),
@@ -2748,9 +2820,11 @@ INSERT INTO `users` (`id`, `name`, `user_slug`, `email`, `password`, `provider`,
 	(22, 'again', 'again', 'again@gmail.com', '$2y$10$KkYn1Rjm5XUUVxzOvY2IleUsdpnUU8HE6rTFD.ywR.uB8HQrJlJde', '', '', 'male', '83', '2,new street', '4353453', '', '', 'sample desc', 0, 1, '5c2cc43e83765', 0, '', '', 'HngDA52XTN5bGN6hYc86XLx6kklUSxK9fgsH9CqWdbspDO4CF2peb2vKgNBM', 'deleted', '2011-01-02 09:31:34', NULL, '', 0),
 	(23, 'test', 'test', 'test@test.com', '$2y$10$d6YIM7WSNLA9Ya5MLNtGJOYJjcW/tZzBHiWXIH8ZUahLWJthZ1QIS', '', '', 'male', '11', '4,new street', '9877767676', '', '', 'test desc', 41, 1, '5c3ebf7e2bbbe', 0, '', '', '87dsPO4U5oS487u0KCBktaOH7oxxsPwOn77l1IiyFF6ZKDjBpPqUm1B5Kr5g', 'deleted', '2017-01-16 00:52:06', NULL, '', 0),
 	(26, 'subadmin', 'subadmin', 'subadmin@gmail.com', '$2y$10$ZmkdANdOhz5/NFNeVPQ2JujPUhy9ci5KzZpitngdPJalhG5gY0Jga', '', '', '', '', '', '879879789', '', '', '', 0, 1, '5cac7f53bb65a', 1, '', '', '68lzsSro7avJjNYnBS0FQWMDhi7TtHotqAmohDXPNFdGOJExrlwYQ96p635C', '', NULL, NULL, '1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16', 0),
-	(27, 'test', 'test', 'test@test.com', '$2y$10$JNv4Ix4kw3TW3ld5N1flVefO3z768CY5xgni9Zxdw6bwZOrvbTFay', '', '', '', '', '', '+237680364380', '', '', '', 1974920, 1, '6330b0f5c584d', 0, '', '', 'wmgIp7o0sIuqrl8ihm36ZKDM7082P6OakF4mYg8uXLnpYNskzQfStSNv1CNn', '', NULL, NULL, '', 0);
+	(27, 'test', 'test', 'test@test.com', '$2y$10$JNv4Ix4kw3TW3ld5N1flVefO3z768CY5xgni9Zxdw6bwZOrvbTFay', '', '', '', '', '', '+237680364380', '', '', '', 1969440, 1, '6330b0f5c584d', 0, '', '', '1SBcB9eLMtcTHzwKSg13DzwyNTv83rnDllbevI8HJXLjdMnjpweTCSsbylXi', '', NULL, NULL, '', 0),
+	(28, 'kiuw3', 'kiuw', 'kiuw3team@gmail.com', '$2y$10$IninWzQctOM0WKRIhwOT2eJfBBhkzAfy7cOkkp90W3fzOj0lEHN9O', '', '', 'male', '', '', '+237680364380', '', '', '', 0, 0, '6334b20d38b46', 0, '', '', NULL, '', '2022-09-28 20:43:57', NULL, '', 0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
+-- Listage de la structure de la table pagrama1. users_meta
 CREATE TABLE IF NOT EXISTS `users_meta` (
   `user_meta_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(200) NOT NULL,
@@ -2759,6 +2833,7 @@ CREATE TABLE IF NOT EXISTS `users_meta` (
   PRIMARY KEY (`user_meta_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
+-- Listage des données de la table pagrama1.users_meta : ~18 rows (environ)
 DELETE FROM `users_meta`;
 /*!40000 ALTER TABLE `users_meta` DISABLE KEYS */;
 INSERT INTO `users_meta` (`user_meta_id`, `user_id`, `user_meta_key`, `user_meta_value`) VALUES
