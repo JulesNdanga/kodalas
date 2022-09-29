@@ -5,7 +5,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.6.4",
+        "php": ">=7.4.1",
         "anhskohbo/no-captcha": "^3.0",
         "benjamincrozat/laravel-dropbox-driver": "^2.0",
         "intervention/image": "dev-master",

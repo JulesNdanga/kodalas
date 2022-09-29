@@ -217,22 +217,9 @@ if(!empty(Cookie::get('lang'))){ $lang = Cookie::get('lang'); } else { if(!empty
             
             <select id="withdraw_type" name="withdraw_type" class="form-control unicase-form-control radiusoff validate[required]" onChange="javascript:withdraw_checking(this.value);">
 					<option value=""><?php echo translate( 97, $lang);?></option>
-						<?php 
 						
-						foreach($site_setting as $row)
-						{
-							$catid=$row->withdraw_option;
-							$selected= explode(",",$catid); 
-							$length= count($selected);
-							for($i=0;$i<$length;$i++)
-							{
-								 $ader_cat= $selected[$i];
-							
-						?>
-						<option value="<?php echo $ader_cat; ?>" ><?php echo $ader_cat; ?></option>
-						<?php 
-						} }
-						?> 
+						<option value="paypal" >MTN MOBILE MONEY</option>
+						
 					</select>
             
           </div>

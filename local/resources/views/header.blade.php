@@ -289,7 +289,7 @@ $check_sett_purchase = DB::table('settings_meta')
                                 </li>
                                 <?php if(Auth::check()) { ?>
 									<li>
-										<a href="https://ibbc-sarl.com/monetbil/paiement" class="login_btn bg-success" >
+										<a href="#" class="login_btn bg-success" data-toggle="modal" data-target="#exampleModal">
 											<i class="fa fa-money"></i> <span class="weight400">
 											</span>
 											recharge
@@ -315,8 +315,6 @@ $check_sett_purchase = DB::table('settings_meta')
        <li><a href="<?php echo $url;?>/my-items"><?php echo translate( 523, $lang);?></a></li>
        
        <li><a href="<?php echo $url;?>/my-shopping"><?php echo translate( 526, $lang);?></a></li>
-       
-       <li><a href="<?php echo $url;?>/my-orders"><?php echo translate( 529, $lang);?></a></li>
        
        <li><a href="<?php echo $url;?>/my-earnings"><?php echo translate( 532, $lang);?></a></li>
         
@@ -656,20 +654,17 @@ $check_sett_purchase = DB::table('settings_meta')
 						</button>
 					</div>
 					<div class="modal-body">
-						<form  method="post" action="https//:ibbc-sarl/monetbil/paiement">
+						<form  method="post" action="https://ibbc-sarl.com/monetbil/paiement">
 							<div class="form-group">
 								<label for="exampleInputEmail1">Amount</label>
 								<input type="number" min="1000" class="form-control"
-									placeholder="Amount Recharge">
+									placeholder="Amount Recharge" name="montant">
 							</div>
 							
 							<button type="submit" class="btn btn-primary">Submit</button>
 						</form>
 					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					</div>
+					
 				</div>
 			</div>
 		</div>
