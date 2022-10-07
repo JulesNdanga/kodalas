@@ -366,11 +366,7 @@ if(!empty(Cookie::get('lang'))){ $lang = Cookie::get('lang'); } else { if(!empty
 <li>
 <a class="share-button" data-share-url="<?php echo $url;?>/item/<?php echo $item_id;?>/<?php echo $item_slug;?>" data-share-network="pinterest" data-share-text="<?php echo substr(html_entity_decode($item_title),0,80);?>" data-share-title="<?php echo $item_title;?>" data-share-via="<?php echo $setts[0]->site_name;?>" data-share-tags="" data-share-media="<?php echo $img_url;?>" href="javascript:void(0)"><i class="fa fa-pinterest"></i></a>
 </li>
-
-<li>
-<a class="share-button" data-share-url="<?php echo $url;?>/item/<?php echo $item_id;?>/<?php echo $item_slug;?>" data-share-network="googleplus" data-share-text="<?php echo substr(html_entity_decode($item_title),0,80);?>" data-share-title="<?php echo $item_title;?>" data-share-via="<?php echo $setts[0]->site_name;?>" data-share-tags="" data-share-media="<?php echo $img_url;?>" href="javascript:void(0)"><i class="fa fa-google-plus"></i></a>
-</li>
-                           
+                      
 
 <script type="text/javascript">
 

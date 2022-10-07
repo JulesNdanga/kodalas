@@ -13,11 +13,8 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Listage de la structure de la base pour pagrama1
-CREATE DATABASE IF NOT EXISTS `pagrama1` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `pagrama1`;
 
--- Listage de la structure de la table pagrama1. avig_language
+-- Listage de la structure de la table  avig_language
 CREATE TABLE IF NOT EXISTS `avig_language` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `lang_name` varchar(200) NOT NULL,
@@ -28,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `avig_language` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.avig_language : ~1 rows (environ)
+-- Listage des données de la table avig_language : ~1 rows (environ)
 DELETE FROM `avig_language`;
 /*!40000 ALTER TABLE `avig_language` DISABLE KEYS */;
 INSERT INTO `avig_language` (`id`, `lang_name`, `lang_code`, `lang_flag`, `lang_default`, `lang_status`) VALUES
@@ -36,7 +33,7 @@ INSERT INTO `avig_language` (`id`, `lang_name`, `lang_code`, `lang_flag`, `lang_
 	(10, 'Français', 'fr', '1662924252.jpg', 0, 1);
 /*!40000 ALTER TABLE `avig_language` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. avig_translate
+-- Listage de la structure de la table  avig_translate
 CREATE TABLE IF NOT EXISTS `avig_translate` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
@@ -46,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `avig_translate` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1290 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.avig_translate : ~1 277 rows (environ)
+-- Listage des données de la table avig_translate : ~1 277 rows (environ)
 DELETE FROM `avig_translate`;
 /*!40000 ALTER TABLE `avig_translate` DISABLE KEYS */;
 INSERT INTO `avig_translate` (`id`, `name`, `token`, `lang_code`, `parent`) VALUES
@@ -1341,7 +1338,7 @@ INSERT INTO `avig_translate` (`id`, `name`, `token`, `lang_code`, `parent`) VALU
 	(1289, '', '6330c78c9d3e9', 'fr', 697);
 /*!40000 ALTER TABLE `avig_translate` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. category
+-- Listage de la structure de la table  category
 CREATE TABLE IF NOT EXISTS `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cat_name` varchar(255) NOT NULL,
@@ -1357,7 +1354,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.category : ~51 rows (environ)
+-- Listage des données de la table category : ~51 rows (environ)
 DELETE FROM `category`;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
 INSERT INTO `category` (`id`, `cat_name`, `post_slug`, `image`, `cat_type`, `display_menu`, `delete_status`, `token`, `lang_code`, `parent`, `status`) VALUES
@@ -1414,7 +1411,7 @@ INSERT INTO `category` (`id`, `cat_name`, `post_slug`, `image`, `cat_type`, `dis
 	(83, '', 'laravel', '', 'framework', 1, '', '5c5adcaa25d8f', 'es', 41, 1);
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. contact_us
+-- Listage de la structure de la table  contact_us
 CREATE TABLE IF NOT EXISTS `contact_us` (
   `cont_id` int(11) NOT NULL AUTO_INCREMENT,
   `cont_name` varchar(200) NOT NULL,
@@ -1425,7 +1422,7 @@ CREATE TABLE IF NOT EXISTS `contact_us` (
   PRIMARY KEY (`cont_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.contact_us : ~3 rows (environ)
+-- Listage des données de la table contact_us : ~3 rows (environ)
 DELETE FROM `contact_us`;
 /*!40000 ALTER TABLE `contact_us` DISABLE KEYS */;
 INSERT INTO `contact_us` (`cont_id`, `cont_name`, `cont_email`, `cont_phone`, `cont_date`, `cont_message`) VALUES
@@ -1434,7 +1431,7 @@ INSERT INTO `contact_us` (`cont_id`, `cont_name`, `cont_email`, `cont_phone`, `c
 	(7, 'sssa', 'sds', 'fdsfda', '01-16-2019 08:40:04 am', 'fdsadfsa');
 /*!40000 ALTER TABLE `contact_us` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. country
+-- Listage de la structure de la table  country
 CREATE TABLE IF NOT EXISTS `country` (
   `country_id` int(11) NOT NULL AUTO_INCREMENT,
   `country_name` varchar(500) NOT NULL,
@@ -1442,7 +1439,7 @@ CREATE TABLE IF NOT EXISTS `country` (
   PRIMARY KEY (`country_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=204 DEFAULT CHARSET=latin1;
 
--- Listage des données de la table pagrama1.country : ~197 rows (environ)
+-- Listage des données de la table country : ~197 rows (environ)
 DELETE FROM `country`;
 /*!40000 ALTER TABLE `country` DISABLE KEYS */;
 INSERT INTO `country` (`country_id`, `country_name`, `country_badges`) VALUES
@@ -1645,14 +1642,14 @@ INSERT INTO `country` (`country_id`, `country_name`, `country_badges`) VALUES
 	(203, 'Zimbabwe', '1549435943.png');
 /*!40000 ALTER TABLE `country` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. currency
+-- Listage de la structure de la table  currency
 CREATE TABLE IF NOT EXISTS `currency` (
   `currency_id` int(11) NOT NULL AUTO_INCREMENT,
   `currency_code` varchar(50) NOT NULL,
   PRIMARY KEY (`currency_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.currency : ~33 rows (environ)
+-- Listage des données de la table currency : ~33 rows (environ)
 DELETE FROM `currency`;
 /*!40000 ALTER TABLE `currency` DISABLE KEYS */;
 INSERT INTO `currency` (`currency_id`, `currency_code`) VALUES
@@ -1692,7 +1689,7 @@ INSERT INTO `currency` (`currency_id`, `currency_code`) VALUES
 	(41, 'XAF');
 /*!40000 ALTER TABLE `currency` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. migrations
+-- Listage de la structure de la table  migrations
 CREATE TABLE IF NOT EXISTS `migrations` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `migration` varchar(255) NOT NULL,
@@ -1700,7 +1697,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.migrations : ~2 rows (environ)
+-- Listage des données de la table migrations : ~2 rows (environ)
 DELETE FROM `migrations`;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -1708,7 +1705,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(2, '2014_10_12_100000_create_password_resets_table', 1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. newsletter
+-- Listage de la structure de la table  newsletter
 CREATE TABLE IF NOT EXISTS `newsletter` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(200) NOT NULL,
@@ -1716,7 +1713,7 @@ CREATE TABLE IF NOT EXISTS `newsletter` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.newsletter : ~4 rows (environ)
+-- Listage des données de la table newsletter : ~4 rows (environ)
 DELETE FROM `newsletter`;
 /*!40000 ALTER TABLE `newsletter` DISABLE KEYS */;
 INSERT INTO `newsletter` (`id`, `email`, `activated`) VALUES
@@ -1726,7 +1723,7 @@ INSERT INTO `newsletter` (`id`, `email`, `activated`) VALUES
 	(7, 'demo@gmail.com', 0);
 /*!40000 ALTER TABLE `newsletter` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. pages
+-- Listage de la structure de la table  pages
 CREATE TABLE IF NOT EXISTS `pages` (
   `page_id` int(11) NOT NULL AUTO_INCREMENT,
   `page_title` varchar(255) NOT NULL,
@@ -1741,7 +1738,7 @@ CREATE TABLE IF NOT EXISTS `pages` (
   PRIMARY KEY (`page_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.pages : ~24 rows (environ)
+-- Listage des données de la table pages : ~24 rows (environ)
 DELETE FROM `pages`;
 /*!40000 ALTER TABLE `pages` DISABLE KEYS */;
 INSERT INTO `pages` (`page_id`, `page_title`, `post_slug`, `page_desc`, `photo`, `menu_position`, `token`, `lang_code`, `parent`, `menu_order`) VALUES
@@ -1771,7 +1768,7 @@ INSERT INTO `pages` (`page_id`, `page_title`, `post_slug`, `page_desc`, `photo`,
 	(35, 'Política de privacidad', 'privacy-policy', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex laboris nisi ut aliquip', '', 'footer-menu', '5c3aceda14a3b', 'es', 12, 8);
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. post
+-- Listage de la structure de la table  post
 CREATE TABLE IF NOT EXISTS `post` (
   `post_id` int(11) NOT NULL AUTO_INCREMENT,
   `post_title` varchar(200) NOT NULL,
@@ -1806,7 +1803,7 @@ CREATE TABLE IF NOT EXISTS `post` (
   PRIMARY KEY (`post_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.post : ~10 rows (environ)
+-- Listage des données de la table post : ~10 rows (environ)
 DELETE FROM `post`;
 /*!40000 ALTER TABLE `post` DISABLE KEYS */;
 INSERT INTO `post` (`post_id`, `post_title`, `post_slug`, `post_desc`, `post_tags`, `post_type`, `post_seat_space`, `post_parent`, `post_comment_type`, `post_media_type`, `post_image`, `post_start_date`, `post_end_date`, `post_location`, `post_phone`, `post_website`, `post_email`, `post_user_id`, `post_audio`, `post_video`, `post_date`, `post_staff_type`, `post_facebook`, `post_twitter`, `post_gplus`, `post_youtube`, `token`, `lang_code`, `parent`, `post_status`) VALUES
@@ -1821,7 +1818,7 @@ INSERT INTO `post` (`post_id`, `post_title`, `post_slug`, `post_desc`, `post_tag
 	(54, 'Hermosos botones css3 con efectos de desplazamiento.', 'beautiful-css-buttons-with-hover-effects', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'css3,hover effect,beautiful', 'blog', 0, 0, '', 'image', '1554285365.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '', '', '', 0, '1554285262.1539408495.SampleAudio_0.4mb.mp3', 'https://www.youtube.com/watch?v=2MpUj-Aua48', '2019-04-03 09:56:05', '', '', '', '', '', '5c3c3c4e7ad5f', 'es', 42, '1');
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. products
+-- Listage de la structure de la table  products
 CREATE TABLE IF NOT EXISTS `products` (
   `item_id` int(11) NOT NULL AUTO_INCREMENT,
   `item_token` varchar(1000) NOT NULL,
@@ -1875,7 +1872,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   PRIMARY KEY (`item_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=148 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.products : ~138 rows (environ)
+-- Listage des données de la table products : ~138 rows (environ)
 DELETE FROM `products`;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 INSERT INTO `products` (`item_id`, `item_token`, `user_id`, `item_title`, `item_slug`, `item_short_desc`, `item_desc`, `regular_price_six_month`, `regular_price_one_year`, `extended_price_six_month`, `extended_price_one_year`, `high_resolution`, `compatible_browser`, `file_included`, `demo_url`, `support_item`, `future_update`, `unlimited_download`, `category`, `framework_category`, `first_update`, `last_update`, `sales`, `item_thumbnail`, `preview_image`, `main_file`, `item_tags`, `item_featured`, `featured_startdate`, `featured_enddate`, `featured_days`, `featured_price`, `featured_payment_type`, `featured_payment_status`, `featured_payment_key`, `downloaded`, `item_type`, `item_script_type`, `item_layered`, `graphics_files`, `adobe_cs_version`, `pixel_dimensions`, `print_dimensions`, `liked`, `delete_status`, `token`, `lang_code`, `parent`, `item_status`) VALUES
@@ -2021,7 +2018,7 @@ INSERT INTO `products` (`item_id`, `item_token`, `user_id`, `item_title`, `item_
 	(147, '6330bb79ce95f', 1, '', 'charity', '', '', 12500, 19000, 1900, 4800, 'Yes', 'IE6,IE7,IE8,IE9,IE10,IE11,Firefox,Safari,Opera,Chrome,Edge', 'html,css,javascript', 'http://demo.htmlcodex.com/2553/free-nonprofit-website-template/', 'Yes', 'Yes', '', '30_cat', '', '2022-09-25', '2022-09-25', 0, '166413838978.Capture2.jpg', '166413838824.Capture2.jpg', '166413838812.chariteam.zip', 'charity,template', 1, '2022-09-25', '2023-09-25', 365, 1000, '', '', '', 6, 'yes', 'code', '', '', '', '', '', 0, '', '6330bb79ce95f', 'fr', 146, 1);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. products_meta
+-- Listage de la structure de la table  products_meta
 CREATE TABLE IF NOT EXISTS `products_meta` (
   `item_meta_id` int(11) NOT NULL AUTO_INCREMENT,
   `item_token` varchar(200) NOT NULL,
@@ -2031,7 +2028,7 @@ CREATE TABLE IF NOT EXISTS `products_meta` (
   PRIMARY KEY (`item_meta_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.products_meta : ~28 rows (environ)
+-- Listage des données de la table products_meta : ~28 rows (environ)
 DELETE FROM `products_meta`;
 /*!40000 ALTER TABLE `products_meta` DISABLE KEYS */;
 INSERT INTO `products_meta` (`item_meta_id`, `item_token`, `user_id`, `item_meta_key`, `item_meta_value`) VALUES
@@ -2065,7 +2062,7 @@ INSERT INTO `products_meta` (`item_meta_id`, `item_token`, `user_id`, `item_meta
 	(53, '5cb4892badcea', 1, 'item_video_preview', '1555335576172.sarav.mp4');
 /*!40000 ALTER TABLE `products_meta` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. product_checkout
+-- Listage de la structure de la table  product_checkout
 CREATE TABLE IF NOT EXISTS `product_checkout` (
   `cid` int(11) NOT NULL AUTO_INCREMENT,
   `purchase_token` varchar(500) NOT NULL,
@@ -2107,7 +2104,7 @@ CREATE TABLE IF NOT EXISTS `product_checkout` (
   PRIMARY KEY (`cid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.product_checkout : ~45 rows (environ)
+-- Listage des données de la table product_checkout : ~45 rows (environ)
 DELETE FROM `product_checkout`;
 /*!40000 ALTER TABLE `product_checkout` DISABLE KEYS */;
 INSERT INTO `product_checkout` (`cid`, `purchase_token`, `token`, `ord_id`, `item_prices`, `item_user_id`, `user_id`, `total`, `vendor_amount`, `admin_amount`, `payment_type`, `payment_token`, `payment_date`, `payment_approval`, `bill_firstname`, `bill_lastname`, `bill_companyname`, `bill_email`, `bill_phone`, `bill_country`, `bill_address`, `bill_city`, `bill_state`, `bill_postcode`, `enable_ship`, `ship_firstname`, `ship_lastname`, `ship_companyname`, `ship_email`, `ship_phone`, `ship_country`, `ship_address`, `ship_city`, `ship_state`, `ship_postcode`, `other_notes`, `payment_status`) VALUES
@@ -2163,7 +2160,7 @@ INSERT INTO `product_checkout` (`cid`, `purchase_token`, `token`, `ord_id`, `ite
 	(58, '2740932', 'll3zHmA9AW0Ntgw8nhGQKQVK1OmpC7kh8AwfvlFq', '84', '120', '1', 27, 120, 110, 10, 'wallet', '', '2022-09-28', 0, 'jules', 'ndanga', 'fnitgroup', 'julesndanga7@gmail.com', '+237 0659484590', 'Cameroon', 'douala logbessou', 'douala', 'Littorale', '4563', 0, '', '', '', '', '', '', '', '', '', '', '', 'completed');
 /*!40000 ALTER TABLE `product_checkout` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. product_comment
+-- Listage de la structure de la table  product_comment
 CREATE TABLE IF NOT EXISTS `product_comment` (
   `comm_id` int(11) NOT NULL AUTO_INCREMENT,
   `item_id` int(200) NOT NULL,
@@ -2177,7 +2174,7 @@ CREATE TABLE IF NOT EXISTS `product_comment` (
   PRIMARY KEY (`comm_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.product_comment : ~24 rows (environ)
+-- Listage des données de la table product_comment : ~24 rows (environ)
 DELETE FROM `product_comment`;
 /*!40000 ALTER TABLE `product_comment` DISABLE KEYS */;
 INSERT INTO `product_comment` (`comm_id`, `item_id`, `item_token`, `comm_user_id`, `item_user_id`, `comm_text`, `comm_date`, `comm_group_id`, `comm_parent`) VALUES
@@ -2207,7 +2204,7 @@ INSERT INTO `product_comment` (`comm_id`, `item_id`, `item_token`, `comm_user_id
 	(26, 80, '5c7f72445ca2d', 3, 3, 'thanks for your comments', '2019-04-01 07:18:54', '5ca1bb480f506', 24);
 /*!40000 ALTER TABLE `product_comment` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. product_images
+-- Listage de la structure de la table  product_images
 CREATE TABLE IF NOT EXISTS `product_images` (
   `item_img_id` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(200) NOT NULL,
@@ -2215,7 +2212,7 @@ CREATE TABLE IF NOT EXISTS `product_images` (
   PRIMARY KEY (`item_img_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.product_images : ~45 rows (environ)
+-- Listage des données de la table product_images : ~45 rows (environ)
 DELETE FROM `product_images`;
 /*!40000 ALTER TABLE `product_images` DISABLE KEYS */;
 INSERT INTO `product_images` (`item_img_id`, `image`, `item_token`) VALUES
@@ -2269,7 +2266,7 @@ INSERT INTO `product_images` (`item_img_id`, `image`, `item_token`) VALUES
 	(85, '1664138391_12Capture4.jpg', '6330bb79ce95f');
 /*!40000 ALTER TABLE `product_images` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. product_liked
+-- Listage de la structure de la table  product_liked
 CREATE TABLE IF NOT EXISTS `product_liked` (
   `like_id` int(11) NOT NULL AUTO_INCREMENT,
   `item_id` int(200) NOT NULL,
@@ -2277,7 +2274,7 @@ CREATE TABLE IF NOT EXISTS `product_liked` (
   PRIMARY KEY (`like_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.product_liked : ~5 rows (environ)
+-- Listage des données de la table product_liked : ~5 rows (environ)
 DELETE FROM `product_liked`;
 /*!40000 ALTER TABLE `product_liked` DISABLE KEYS */;
 INSERT INTO `product_liked` (`like_id`, `item_id`, `user_id`) VALUES
@@ -2288,7 +2285,7 @@ INSERT INTO `product_liked` (`like_id`, `item_id`, `user_id`) VALUES
 	(5, 42, 20);
 /*!40000 ALTER TABLE `product_liked` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. product_orders
+-- Listage de la structure de la table  product_orders
 CREATE TABLE IF NOT EXISTS `product_orders` (
   `ord_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(200) NOT NULL,
@@ -2314,7 +2311,7 @@ CREATE TABLE IF NOT EXISTS `product_orders` (
   PRIMARY KEY (`ord_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.product_orders : ~48 rows (environ)
+-- Listage des données de la table product_orders : ~48 rows (environ)
 DELETE FROM `product_orders`;
 /*!40000 ALTER TABLE `product_orders` DISABLE KEYS */;
 INSERT INTO `product_orders` (`ord_id`, `user_id`, `item_id`, `item_name`, `item_user_id`, `item_token`, `purchase_token`, `purchase_code`, `payment_token`, `payment_type`, `licence_type`, `license_start_date`, `license_end_date`, `downloaded_count`, `price`, `vendor_amount`, `admin_amount`, `total`, `status`, `delete_status`, `approval_status`) VALUES
@@ -2374,7 +2371,7 @@ INSERT INTO `product_orders` (`ord_id`, `user_id`, `item_id`, `item_name`, `item
 	(84, 27, 3, 'Subscription script', 1, '5b5d2b5a07c0d', '2740932', 'WRfvs2jUiyY8GcIM3ayWhaMB2OtBMcadqy2', '', 'wallet', 'extended_price_one_year', '2022-09-28', '2023-09-28', 0, 120, 110, 10, 120, 'completed', '', 'payment released to vendor');
 /*!40000 ALTER TABLE `product_orders` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. product_rating
+-- Listage de la structure de la table  product_rating
 CREATE TABLE IF NOT EXISTS `product_rating` (
   `rate_id` int(11) NOT NULL AUTO_INCREMENT,
   `item_id` int(200) NOT NULL,
@@ -2385,7 +2382,7 @@ CREATE TABLE IF NOT EXISTS `product_rating` (
   PRIMARY KEY (`rate_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.product_rating : ~11 rows (environ)
+-- Listage des données de la table product_rating : ~11 rows (environ)
 DELETE FROM `product_rating`;
 /*!40000 ALTER TABLE `product_rating` DISABLE KEYS */;
 INSERT INTO `product_rating` (`rate_id`, `item_id`, `user_id`, `rating`, `review`, `review_date`) VALUES
@@ -2402,7 +2399,7 @@ INSERT INTO `product_rating` (`rate_id`, `item_id`, `user_id`, `rating`, `review
 	(15, 9, 8, 5, 'good', '2019-01-22 12:19:50');
 /*!40000 ALTER TABLE `product_rating` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. product_refund
+-- Listage de la structure de la table  product_refund
 CREATE TABLE IF NOT EXISTS `product_refund` (
   `dispute_id` int(11) NOT NULL AUTO_INCREMENT,
   `purchase_token` int(200) NOT NULL,
@@ -2421,7 +2418,7 @@ CREATE TABLE IF NOT EXISTS `product_refund` (
   PRIMARY KEY (`dispute_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.product_refund : ~13 rows (environ)
+-- Listage des données de la table product_refund : ~13 rows (environ)
 DELETE FROM `product_refund`;
 /*!40000 ALTER TABLE `product_refund` DISABLE KEYS */;
 INSERT INTO `product_refund` (`dispute_id`, `purchase_token`, `request_date`, `order_id`, `item_id`, `payment_date`, `buyer_id`, `vendor_id`, `payment`, `payment_type`, `subject`, `message`, `delete_status`, `dispute_status`) VALUES
@@ -2440,7 +2437,7 @@ INSERT INTO `product_refund` (`dispute_id`, `purchase_token`, `request_date`, `o
 	(27, 2858375, '2019-04-16', 71, 89, '2019-04-16', 3, 7, 49, 'localbank', 'i need refund money', 'i need refund money', '', 'payment refunded to buyer');
 /*!40000 ALTER TABLE `product_refund` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. product_report
+-- Listage de la structure de la table  product_report
 CREATE TABLE IF NOT EXISTS `product_report` (
   `rid` int(11) NOT NULL AUTO_INCREMENT,
   `item_id` int(100) NOT NULL,
@@ -2451,12 +2448,12 @@ CREATE TABLE IF NOT EXISTS `product_report` (
   PRIMARY KEY (`rid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Listage des données de la table pagrama1.product_report : ~0 rows (environ)
+-- Listage des données de la table product_report : ~0 rows (environ)
 DELETE FROM `product_report`;
 /*!40000 ALTER TABLE `product_report` DISABLE KEYS */;
 /*!40000 ALTER TABLE `product_report` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. product_withdraw
+-- Listage de la structure de la table  product_withdraw
 CREATE TABLE IF NOT EXISTS `product_withdraw` (
   `wid` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(100) NOT NULL,
@@ -2473,7 +2470,7 @@ CREATE TABLE IF NOT EXISTS `product_withdraw` (
   PRIMARY KEY (`wid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.product_withdraw : ~9 rows (environ)
+-- Listage des données de la table product_withdraw : ~9 rows (environ)
 DELETE FROM `product_withdraw`;
 /*!40000 ALTER TABLE `product_withdraw` DISABLE KEYS */;
 INSERT INTO `product_withdraw` (`wid`, `user_id`, `withdraw_amount`, `withdraw_payment_type`, `paypal_id`, `stripe_id`, `bank_account_no`, `bank_info`, `bank_ifsc`, `paytm_no`, `perfectmoney_id`, `withdraw_status`) VALUES
@@ -2488,7 +2485,7 @@ INSERT INTO `product_withdraw` (`wid`, `user_id`, `withdraw_amount`, `withdraw_p
 	(11, 27, '2566', 'paypal', '680364380', '', '', '', '', '', '', 'pending');
 /*!40000 ALTER TABLE `product_withdraw` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. settings
+-- Listage de la structure de la table  settings
 CREATE TABLE IF NOT EXISTS `settings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `site_name` varchar(255) NOT NULL,
@@ -2565,14 +2562,14 @@ CREATE TABLE IF NOT EXISTS `settings` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.settings : ~0 rows (environ)
+-- Listage des données de la table settings : ~0 rows (environ)
 DELETE FROM `settings`;
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
 INSERT INTO `settings` (`id`, `site_name`, `site_desc`, `site_keyword`, `site_address`, `site_phone`, `site_email`, `site_layout`, `site_facebook`, `site_twitter`, `site_gplus`, `site_pinterest`, `site_instagram`, `site_currency`, `site_logo`, `site_favicon`, `site_banner`, `site_banner_heading`, `site_banner_subheading`, `header_type`, `site_copyright`, `site_post_per`, `site_comment_per`, `site_latest_item`, `site_latest_item_count`, `paypal_id`, `paypal_url`, `site_map_api`, `site_url`, `image_size`, `video_size`, `image_type`, `mp3_size`, `zip_size`, `site_loading`, `site_loading_url`, `site_primary_color`, `site_secondary_color`, `site_button_color`, `site_link_color`, `with_submit_product`, `payment_option`, `withdraw_option`, `stripe_mode`, `test_publish_key`, `test_secret_key`, `live_publish_key`, `live_secret_key`, `commission_mode`, `commission_amt`, `withdraw_amt`, `processing_fee`, `featured_price`, `featured_days`, `min_price_range`, `max_price_range`, `promo_icon_1`, `promo_title_1`, `promo_desc_1`, `promo_icon_2`, `promo_title_2`, `promo_desc_2`, `promo_icon_3`, `promo_title_3`, `promo_desc_3`, `promo_icon_4`, `promo_title_4`, `promo_desc_4`, `site_footer_newsletter`, `site_blog_visible`, `site_blog_per`, `refund_time_limit`) VALUES
 	(1, 'KODALAS', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat', 'lorem,ipsum,lorem,ipsum', 'Douala, Cameroon', '(+237) 659-484-590', 'test@test.com', '4', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.google.com', 'http://www.pinterest.com', 'http://www.instagram.com', 'XAF', '1664134613555.png', '166413461390.png', '1554278724.jpg', 'BETTER ITEMS FOR SALE', 'Best Premium PSD, HTML, Wordpress Themes, PHP Scripts & Others Graphics', 'static', '© 2022. All Rights Reserved. Designed by Jules NDANGA', 20, 3, 7, 18, 'demochecks@gmail.com', 'https://www.sandbox.paypal.com/cgi-bin/webscr', 'AIzaSyDDsvwtCM8LTvi1Zm-XydV-iutWZzAJVDI', 'http://localhost/laraportfolio', 18288, 1024, 'jpg,jpeg,png,gif', 18288, 18288, 1, '1554278724.gif', '#051F39', '#0E2A47', '#21C063', '#0E2A47', 0, 'wallet', 'paypal,localbank', 'test', 'pk_test_bWx1fEQgVZozaQyPZpAjwDMQ', 'sk_test_JKf2bTvOtK7fPFrHoMphlvAV', 'dfsaaaaaaaaaa', 'fdssssssssssssssssssss', 'fixed', 10, 1000, 0, 1000, 365, 100, 300, 'fa-desktop', 'High Quality Items', 'Item made by professionals with 15 years of work experience.', 'fa-clock-o', '24/7 Customer Services', 'Our Customer Services Managers will always help you.', 'fa-thumbs-o-up', '100% Satisfaction', 'In case you are not satisfied with the purchased item, we will change it.', 'fa-money', 'Money Back guarantee', 'In case you change your mind you will get a refund in 30 days.', 'Want more script,themes & templates? Subscribe to our mailing list to receive an update when new items arrive!', 'yes', 2, 15);
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. settings_meta
+-- Listage de la structure de la table  settings_meta
 CREATE TABLE IF NOT EXISTS `settings_meta` (
   `sett_meta_id` int(11) NOT NULL AUTO_INCREMENT,
   `sett_meta_key` varchar(200) NOT NULL,
@@ -2580,7 +2577,7 @@ CREATE TABLE IF NOT EXISTS `settings_meta` (
   PRIMARY KEY (`sett_meta_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.settings_meta : ~56 rows (environ)
+-- Listage des données de la table settings_meta : ~56 rows (environ)
 DELETE FROM `settings_meta`;
 /*!40000 ALTER TABLE `settings_meta` DISABLE KEYS */;
 INSERT INTO `settings_meta` (`sett_meta_id`, `sett_meta_key`, `sett_meta_value`) VALUES
@@ -2642,7 +2639,7 @@ INSERT INTO `settings_meta` (`sett_meta_id`, `sett_meta_key`, `sett_meta_value`)
 	(100, 'site_verify_purchase', 'off');
 /*!40000 ALTER TABLE `settings_meta` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. subcategory
+-- Listage de la structure de la table  subcategory
 CREATE TABLE IF NOT EXISTS `subcategory` (
   `subid` int(11) NOT NULL AUTO_INCREMENT,
   `subcat_name` varchar(255) NOT NULL,
@@ -2658,7 +2655,7 @@ CREATE TABLE IF NOT EXISTS `subcategory` (
   PRIMARY KEY (`subid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=163 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.subcategory : ~111 rows (environ)
+-- Listage des données de la table subcategory : ~111 rows (environ)
 DELETE FROM `subcategory`;
 /*!40000 ALTER TABLE `subcategory` DISABLE KEYS */;
 INSERT INTO `subcategory` (`subid`, `subcat_name`, `post_slug`, `cat_id`, `subimage`, `subcat_type`, `delete_status`, `token`, `lang_code`, `parent`, `status`) VALUES
@@ -2775,7 +2772,7 @@ INSERT INTO `subcategory` (`subid`, `subcat_name`, `post_slug`, `cat_id`, `subim
 	(162, '', 'version', '41', '', 'framework', '', '5c5adcd51887f', 'es', 86, 1);
 /*!40000 ALTER TABLE `subcategory` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. users
+-- Listage de la structure de la table  users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(191) NOT NULL,
@@ -2806,7 +2803,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.users : ~11 rows (environ)
+-- Listage des données de la table users : ~11 rows (environ)
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `name`, `user_slug`, `email`, `password`, `provider`, `provider_id`, `gender`, `country`, `address`, `phone`, `photo`, `profile_banner`, `about`, `wallet`, `confirmation`, `confirm_key`, `admin`, `referred_by`, `referral_amount`, `remember_token`, `delete_status`, `created_at`, `updated_at`, `show_menu`, `status`) VALUES
@@ -2824,7 +2821,7 @@ INSERT INTO `users` (`id`, `name`, `user_slug`, `email`, `password`, `provider`,
 	(28, 'kiuw3', 'kiuw', 'kiuw3team@gmail.com', '$2y$10$IninWzQctOM0WKRIhwOT2eJfBBhkzAfy7cOkkp90W3fzOj0lEHN9O', '', '', 'male', '', '', '+237680364380', '', '', '', 0, 0, '6334b20d38b46', 0, '', '', NULL, '', '2022-09-28 20:43:57', NULL, '', 0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
--- Listage de la structure de la table pagrama1. users_meta
+-- Listage de la structure de la table  users_meta
 CREATE TABLE IF NOT EXISTS `users_meta` (
   `user_meta_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(200) NOT NULL,
@@ -2833,7 +2830,7 @@ CREATE TABLE IF NOT EXISTS `users_meta` (
   PRIMARY KEY (`user_meta_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table pagrama1.users_meta : ~18 rows (environ)
+-- Listage des données de la table users_meta : ~18 rows (environ)
 DELETE FROM `users_meta`;
 /*!40000 ALTER TABLE `users_meta` DISABLE KEYS */;
 INSERT INTO `users_meta` (`user_meta_id`, `user_id`, `user_meta_key`, `user_meta_value`) VALUES

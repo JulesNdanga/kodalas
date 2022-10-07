@@ -235,21 +235,7 @@ function translate_header($id,$lang)
                         
                         <div class="height20 clearfix"></div>
                         
-                        <div class="row" align="center">
-                        <div class="col-md-12" align="center">
-                        <a href="{{ url('/login/facebook') }}">
-
-                        <img src="<?php echo $url;?>/local/images/facebook_btn.png" border="0" alt="facebook login" class=""  />
-                        </a>
-                                
-                              
-                           <a href="{{ url('/login/google') }}" class="">
-                        <img src="<?php echo $url;?>/local/images/google_btn.png" border="0" alt="google plus login" class="" />
-                        </a>
-                        
-                        </div>
-                        
-                        </div>
+                     
                         
                        
                         

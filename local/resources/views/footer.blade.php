@@ -222,8 +222,7 @@ $sett_meta_cookie_position = DB::table('settings_meta')
           <?php if(!empty($setts[0]->site_facebook)){?><a href="<?php echo $setts[0]->site_facebook;?>" target="_blank"><i class="fa fa-facebook"></i></a><?php } ?>
                                     
                                     <?php if(!empty($setts[0]->site_twitter)){?><a href="<?php echo $setts[0]->site_twitter;?>" target="_blank"><i class="fa fa-twitter"></i></a><?php } ?>
-                                    <?php if(!empty($setts[0]->site_gplus)){?><a href="<?php echo $setts[0]->site_gplus;?>" target="_blank"><i class="fa fa-google-plus"></i></a><?php } ?>
-									<?php if(!empty($setts[0]->site_pinterest)){?><a href="<?php echo $setts[0]->site_pinterest;?>" target="_blank"><i class="fa fa-pinterest"></i></a><?php } ?>
+
 									<?php if(!empty($setts[0]->site_instagram)){?><a href="<?php echo $setts[0]->site_instagram;?>" target="_blank"><i class="fa fa-instagram"></i></a><?php } ?>
        
           </div>

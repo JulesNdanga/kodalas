@@ -119,20 +119,7 @@ $edit_pages = DB::table('pages')
     </div>
     </div>
 
-                    <div class="wrapper-inner">
-
-                    	<!-- map -->
-
-                        <div class="map-wrapper">
-
-                             <?php if(!empty($setting[0]->site_address)){?>
-    
-    <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<?php echo $setting[0]->site_map_api;?>&q=<?php echo $setting[0]->site_address;?>" allowfullscreen>
-	</iframe>
-   
-    <?php } ?>
-
-                        </div>
+                
 
                         <!-- map -->
 

@@ -501,8 +501,6 @@ if(!empty(Cookie::get('lang'))){ $lang = Cookie::get('lang'); } else { if(!empty
         		
         			<a class="share-button" data-share-url="<?php echo $url;?>/blog/<?php echo $post[0]->post_slug;?>" data-share-network="linkedin" data-share-text="<?php echo substr($post[0]->post_desc,0,80);?>" data-share-title="<?php echo $post[0]->post_title;?>" data-share-via="<?php echo $setts[0]->site_name;?>" data-share-tags="" data-share-media="<?php echo $imgurls;?>" href="javascript:void(0);"><img src="<?php echo $url;?>/local/images/social/linkedin.png" border="0" /></a>
         		
-        			<a class="share-button" data-share-url="<?php echo $url;?>/blog/<?php echo $post[0]->post_slug;?>" data-share-network="googleplus" data-share-text="<?php echo substr($post[0]->post_desc,0,80);?>" data-share-title="<?php echo $post[0]->post_title;?>" data-share-via="<?php echo $setts[0]->site_name;?>" data-share-tags="" data-share-media="<?php echo $imgurls;?>" href="javascript:void(0);"><img src="<?php echo $url;?>/local/images/social/gplus.png" border="0" /></a>
-        		
 					<a class="share-button" data-share-url="<?php echo $url;?>/blog/<?php echo $post[0]->post_slug;?>" data-share-network="pinterest" data-share-text="<?php echo substr($post[0]->post_desc,0,80);?>" data-share-title="<?php echo $post[0]->post_title;?>" data-share-via="<?php echo $setts[0]->site_name;?>" data-share-tags="" data-share-media="<?php echo $imgurls;?>" href="javascript:void(0);"><img src="<?php echo $url;?>/local/images/social/pinterest.png" border="0" /></a>
 				
                 

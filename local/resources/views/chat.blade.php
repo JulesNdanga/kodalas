@@ -1,1 +1,9 @@
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=38f4afd6-fe4d-40c8-8502-caf16a627cb9"> </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8JQFD16RC4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8JQFD16RC4');
+</script>

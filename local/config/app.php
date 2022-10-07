@@ -183,9 +183,9 @@ return [
         Responsive\Providers\EventServiceProvider::class,
         Responsive\Providers\RouteServiceProvider::class,
 		Laravel\Socialite\SocialiteServiceProvider::class,
-		Mews\Purifier\PurifierServiceProvider::class,
+		//Mews\Purifier\PurifierServiceProvider::class,
 		
-		BC\Laravel\DropboxDriver\ServiceProvider::class,
+		//BC\Laravel\DropboxDriver\ServiceProvider::class,
 
 
     ],
@@ -243,7 +243,6 @@ return [
 	  
 	  'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
 	  'Socialite' => Laravel\Socialite\Facades\Socialite::class,
-	  'Purifier' => Mews\Purifier\Facades\Purifier::class,
 
     ],
 
